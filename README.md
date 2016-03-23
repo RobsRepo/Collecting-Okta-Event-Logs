@@ -7,6 +7,7 @@ This Python script will pull Okta logs into a format that is easily parsable by 
 - It will bring back at most 1000 entries on each outbound call. 
 - It will continue to call until there aren't anymore event logs to pull.
 - There is a system lock on this script when it is initially started to prevent another process from running this script more than once.
+- It will record the last published date of the log that it collected (stored in startTime.properties) and upon the next time this script is invoked it will retrieve event logs from this published time.
  
 # Prerequisites
 -	You will need Python 2.7
