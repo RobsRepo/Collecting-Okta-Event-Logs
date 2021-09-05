@@ -29,7 +29,7 @@ def getDataFromEndPoint(org,token,startTime,limit):
     if(int(limit) > 1000):
         limit = '1000'
 
-    url = 'https://' + org + '.oktapreview.com/api/v1/events?startDate=' + startTime + '&limit=' + limit
+    url = 'https://' + org + '.okta.com/api/v1/logs?startDate=' + startTime + '&limit=' + limit
     headers = { 'Authorization' : 'SSWS ' + token }
     request = urllib2.Request(url, None, headers)
     response = urllib2.urlopen(request)
